@@ -1,6 +1,6 @@
 *{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 .container {
   min-height: 100vh;
@@ -8,23 +8,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
   background: #14161c;
   color: #f2f1ed;
   font-family: sans-serif;
-}
-
-.panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.text {
-  font-size: 14px;
-  color: #8b8f9c;
-  margin: 0;
 }
 
 .signal-box {
@@ -43,30 +30,31 @@
   height: 56px;
   border-radius: 50%;
   background: #2c3040;
+  opacity: 0.25;
+  transition: all 0.2s ease;
 }
 
-.light-red {
+.light.active {
+  opacity: 1;
+}
+
+.light-red.active {
   background: #fb7185;
   box-shadow: 0 0 20px 4px rgba(251, 113, 133, 0.6);
 }
 
-.light-yellow {
+.light-yellow.active {
   background: #ffe066;
   box-shadow: 0 0 20px 4px rgba(255, 224, 102, 0.6);
 }
 
-.light-green {
+.light-green.active {
   background: #4ade80;
   box-shadow: 0 0 20px 4px rgba(74, 222, 128, 0.6);
 }
 
-.controls {
-  display: flex;
-  gap: 10px;
-}
-
 .btn {
-  padding: 10px 20px;
+  padding: 10px 22px;
   border: none;
   border-radius: 8px;
   background: #ffb627;
@@ -79,22 +67,36 @@
   opacity: 0.85;
 }
 
-.btn-emergency {
-  background: #fb7185;
+/* naya officer card */
+.officer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 28px;
+  background: #1b1e27;
+  border: 1px solid #2c3040;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.officer-box h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f2f1ed;
+  letter-spacing: 0.3px;
+}
+
+.officer-box h1::before {
+  content: "👮";
+  margin-right: 8px;
+}
+
+.officer-btn {
+  background: #4ade80;
   color: #14161c;
 }
 
-.input {
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #2c3040;
-  background: #1b1e27;
-  color: #f2f1ed;
-  font-size: 14px;
-  width: 220px;
-}
-
-.input:focus {
-  outline: none;
-  border-color: #ffb627;
+.officer-btn:hover {
+  opacity: 0.85;
 }
